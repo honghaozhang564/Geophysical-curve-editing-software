@@ -130,3 +130,15 @@ C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\ob
 C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.csproj.CoreCompileInputs.cache
 C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.exe
 C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.pdb
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\bin\Debug\WindowsFormsApplicationzhh.exe.config
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\bin\Debug\WindowsFormsApplicationzhh.exe
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\bin\Debug\WindowsFormsApplicationzhh.pdb
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.csproj.AssemblyReference.cache
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.exe.config
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.About.resources
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.Form1.resources
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.Properties.Resources.resources
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.csproj.GenerateResource.cache
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.csproj.CoreCompileInputs.cache
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.exe
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Debug\WindowsFormsApplicationzhh.pdb

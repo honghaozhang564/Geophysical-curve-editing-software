@@ -14,6 +14,7 @@ namespace WindowsFormsApplicationzhh
     {
         List<PointF> Points = new List<PointF>();
         List<选择点结构体> SelectedPoints = new List<选择点结构体>();
+
         struct 选择点结构体
         {
             public int Index;
@@ -157,7 +158,20 @@ namespace WindowsFormsApplicationzhh
 
         }
 
+        public override 曲线类 Clone()
+        {
+            var copy = new 电测深曲线类();
+            copy.minx = this.minx;
+            copy.maxx = this.maxx;
+            copy.miny = this.miny;
+            copy.maxy = this.maxy;
+            copy.DrawRect = this.DrawRect;
+            copy.FileName = this.FileName;
+            copy.Points = new List<PointF>(this.Points);
+            copy.SelectedPoints = new List<选择点结构体>(this.SelectedPoints);
 
+            return copy;
+        }
     }
 
 }

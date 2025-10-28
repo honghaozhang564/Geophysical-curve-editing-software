@@ -15,7 +15,7 @@ namespace WindowsFormsApplicationzhh
         public Rectangle DrawRect = new Rectangle();
         public string FileName;
 
-        List<PointF> Points = new List<PointF>();
+        public List<PointF> Points = new List<PointF>();
         virtual public int SelectedCount
         {
             get { return 0; }
@@ -86,6 +86,11 @@ namespace WindowsFormsApplicationzhh
         virtual public void Save(string path)
         {
 
+        }
+
+        virtual public 曲线类 Clone()
+        {
+            return null;
         }
 
     }

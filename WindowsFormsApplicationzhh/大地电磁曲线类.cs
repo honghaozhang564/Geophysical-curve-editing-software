@@ -575,7 +575,25 @@ namespace WindowsFormsApplicationzhh
 
                 
         }
-        
+
+        public override 曲线类 Clone()
+        {
+            var copy = new 大地电磁曲线类();
+            copy.minx = this.minx;
+            copy.maxx = this.maxx;
+            copy.miny = this.miny;
+            copy.maxy = this.maxy;
+            copy.DrawRect = this.DrawRect;
+            copy.FileName = this.FileName;
+            copy.CurveType = this.CurveType;
+            copy.CurveMode = this.CurveMode;
+            copy.Lines = new List<string>(this.Lines);
+            copy.Points = new List<数据参数结构>(this.Points);
+            copy.SelectedPoints = new List<选择点结构体>(this.SelectedPoints);
+
+            return copy;
+        }
+
 
     }
 }
