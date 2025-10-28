@@ -135,14 +135,14 @@
             // 撤销ToolStripMenuItem
             // 
             this.撤销ToolStripMenuItem.Name = "撤销ToolStripMenuItem";
-            this.撤销ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.撤销ToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.撤销ToolStripMenuItem.Text = "撤销(Undo)";
             this.撤销ToolStripMenuItem.Click += new System.EventHandler(this.撤销ToolStripMenuItem_Click);
             // 
             // 重做ToolStripMenuItem
             // 
             this.重做ToolStripMenuItem.Name = "重做ToolStripMenuItem";
-            this.重做ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.重做ToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.重做ToolStripMenuItem.Text = "重做(Redo)";
             this.重做ToolStripMenuItem.Click += new System.EventHandler(this.重做ToolStripMenuItem_Click);
             // 
@@ -161,25 +161,25 @@
             // 放大ToolStripMenuItem
             // 
             this.放大ToolStripMenuItem.Name = "放大ToolStripMenuItem";
-            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.放大ToolStripMenuItem.Text = "放大(Zoom In)";
             // 
             // 缩小ToolStripMenuItem
             // 
             this.缩小ToolStripMenuItem.Name = "缩小ToolStripMenuItem";
-            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.缩小ToolStripMenuItem.Text = "缩小(Zoom Out)";
             // 
             // 平移ToolStripMenuItem
             // 
             this.平移ToolStripMenuItem.Name = "平移ToolStripMenuItem";
-            this.平移ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.平移ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.平移ToolStripMenuItem.Text = "平移(Pan)";
             // 
             // 还原ToolStripMenuItem
             // 
             this.还原ToolStripMenuItem.Name = "还原ToolStripMenuItem";
-            this.还原ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.还原ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.还原ToolStripMenuItem.Text = "还原(Reset)";
             // 
             // 帮助ToolStripMenuItem

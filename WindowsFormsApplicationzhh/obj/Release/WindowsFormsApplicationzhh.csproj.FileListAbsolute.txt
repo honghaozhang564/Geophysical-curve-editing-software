@@ -10,3 +10,15 @@ C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\ob
 C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.exe
 C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.pdb
 C:\baiduwangpan\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.exe.config
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.csproj.AssemblyReference.cache
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.exe.config
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.exe
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.pdb
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\bin\Release\WindowsFormsApplicationzhh.exe.config
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\bin\Release\WindowsFormsApplicationzhh.exe
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\bin\Release\WindowsFormsApplicationzhh.pdb
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.About.resources
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.Form1.resources
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.Properties.Resources.resources
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.csproj.GenerateResource.cache
+C:\Users\sujy\Desktop\作业8\WindowsFormsApplicationzhh\WindowsFormsApplicationzhh\obj\Release\WindowsFormsApplicationzhh.csproj.CoreCompileInputs.cache

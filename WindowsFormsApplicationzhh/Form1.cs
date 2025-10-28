@@ -45,6 +45,8 @@ namespace WindowsFormsApplicationzhh
             toolStripButton1.Enabled = false;
             toolStripButton3.Enabled = false;
             toolStripButton4.Enabled = false;
+            if (listBox1.Items.Count > 0)
+                    listBox1.SelectedIndex = 0;
         }
 
         void DrawCurve(Graphics g)
