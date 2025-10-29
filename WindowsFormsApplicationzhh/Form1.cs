@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace WindowsFormsApplicationzhh
 {
@@ -321,7 +322,6 @@ namespace WindowsFormsApplicationzhh
 
         private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -347,9 +347,9 @@ namespace WindowsFormsApplicationzhh
 
         private void 帮助HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string url = "https://github.com/honghaozhang564/WindowsFormsApplicationzhh/blob/main/%E5%B8%AE%E5%8A%A9.md";
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
-
         private void 保存数据ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (地球物理曲线 != null)

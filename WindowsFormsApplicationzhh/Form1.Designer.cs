@@ -83,7 +83,6 @@
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             this.文件ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.文件ToolStripMenuItem.Text = "文件";
-            this.文件ToolStripMenuItem.Click += new System.EventHandler(this.文件ToolStripMenuItem_Click);
             // 
             // 读取数据ToolStripMenuItem
             // 
@@ -195,14 +194,14 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.关于ToolStripMenuItem.Text = "关于(About)";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
             // 帮助HelpToolStripMenuItem
             // 
             this.帮助HelpToolStripMenuItem.Name = "帮助HelpToolStripMenuItem";
-            this.帮助HelpToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
+            this.帮助HelpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.帮助HelpToolStripMenuItem.Text = "帮助(Help)";
             this.帮助HelpToolStripMenuItem.Click += new System.EventHandler(this.帮助HelpToolStripMenuItem_Click);
             // 
@@ -219,7 +218,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
@@ -234,7 +232,7 @@
             this.listBox1.Location = new System.Drawing.Point(16, 65);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 169);
+            this.listBox1.Size = new System.Drawing.Size(132, 154);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
             // 
@@ -242,10 +240,10 @@
             // 
             this.propertyGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.propertyGrid1.HelpVisible = false;
-            this.propertyGrid1.Location = new System.Drawing.Point(16, 242);
+            this.propertyGrid1.Location = new System.Drawing.Point(16, 227);
             this.propertyGrid1.Margin = new System.Windows.Forms.Padding(4);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(133, 120);
+            this.propertyGrid1.Size = new System.Drawing.Size(133, 135);
             this.propertyGrid1.TabIndex = 5;
             this.propertyGrid1.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propertyGrid1_PropertyValueChanged);
             // 
