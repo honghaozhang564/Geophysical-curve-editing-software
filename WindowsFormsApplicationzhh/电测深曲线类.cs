@@ -169,7 +169,9 @@ namespace WindowsFormsApplicationzhh
             copy.FileName = this.FileName;
             copy.Points = new List<PointF>(this.Points);
             copy.SelectedPoints = new List<选择点结构体>(this.SelectedPoints);
-
+            copy.zoomScale = this.zoomScale;
+            copy.offsetX = this.offsetX;
+            copy.offsetY = this.offsetY;
             return copy;
         }
     }

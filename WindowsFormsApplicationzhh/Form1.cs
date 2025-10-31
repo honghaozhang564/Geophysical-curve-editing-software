@@ -38,6 +38,7 @@ namespace WindowsFormsApplicationzhh
         {
             选择 = 0,
             编辑 = 1,
+            拖动 = 2,
         }
 
         public Form1()
@@ -48,6 +49,10 @@ namespace WindowsFormsApplicationzhh
             toolStripButton4.Enabled = false;
             if (listBox1.Items.Count > 0)
                     listBox1.SelectedIndex = 0;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         void DrawCurve(Graphics g)
@@ -74,7 +79,7 @@ namespace WindowsFormsApplicationzhh
             if (地球物理曲线 == null) return;
             Graphics g = e.Graphics;
             DrawCurve(g);
-            if (bMouseDown && 地球物理曲线.SelectedCount == 0)
+            if (bMouseDown && 地球物理曲线.SelectedCount == 0 && mouseMode == 鼠标模式.选择)
             {
                 int x = Math.Min(P1.X, P2.X);
                 int y = Math.Min(P1.Y, P2.Y);
@@ -86,38 +91,7 @@ namespace WindowsFormsApplicationzhh
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 文件ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 读取数据ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void 读取电测深数据ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -190,7 +164,6 @@ namespace WindowsFormsApplicationzhh
             buttons_Enable();
             toolStripButton1.Enabled = false;
         }
-
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             pictureBox1.Cursor = Cursors.SizeNS;
@@ -198,7 +171,13 @@ namespace WindowsFormsApplicationzhh
             buttons_Enable();
             toolStripButton2.Enabled = false;
         }
-
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Cursor = Cursors.Hand;
+            mouseMode = 鼠标模式.拖动;
+            buttons_Enable();
+            toolStripButton8.Enabled = false;
+        }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
@@ -240,9 +219,65 @@ namespace WindowsFormsApplicationzhh
             
         }
 
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            if (地球物理曲线 == null) return;
+            currentCurves = new Curves();
+            currentCurves.pCurves.Add(地球物理曲线.Clone());
+            undoCurves.Push(currentCurves.Copy());
+            toolStripButton3.Enabled = true;
+            redoCurves.Clear();
+            toolStripButton4.Enabled = false;
+            地球物理曲线.ZoomIn();
+            pictureBox1.Invalidate();
+        }
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            if (地球物理曲线 == null) return;
+            currentCurves = new Curves();
+            currentCurves.pCurves.Add(地球物理曲线.Clone());
+            undoCurves.Push(currentCurves.Copy());
+            toolStripButton3.Enabled = true;
+            redoCurves.Clear();
+            toolStripButton4.Enabled = false;
+            地球物理曲线.ZoomOut();
+            pictureBox1.Invalidate();
+        }
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            if (地球物理曲线 == null) return;
+            currentCurves = new Curves();
+            currentCurves.pCurves.Add(地球物理曲线.Clone());
+            undoCurves.Push(currentCurves.Copy());
+            toolStripButton3.Enabled = true;
+            redoCurves.Clear();
+            toolStripButton4.Enabled = false;
+            地球物理曲线.ZoomReset();
+            pictureBox1.Invalidate();
+        }
+
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (地球物理曲线 == null) return;
+            if (e.Button == MouseButtons.Left)
+            {
+                Point p = e.Location;
+                if (!bMouseDown && 地球物理曲线!=null && mouseMode == 鼠标模式.选择) 地球物理曲线.DoSelection(p);
+                pictureBox1.Invalidate();
+                P1 = p;
+                bMouseDown = true;
+                if(mouseMode == 鼠标模式.编辑)
+                {
+                    currentCurves = new Curves();
+                    currentCurves.pCurves.Add(地球物理曲线.Clone());
+                }
+                
+            }
+        }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (地球物理曲线!=null && bMouseDown && 地球物理曲线.SelectedCount>0 ) //修改
+            if (地球物理曲线 != null && bMouseDown && 地球物理曲线.SelectedCount > 0 && mouseMode != 鼠标模式.拖动)
             {
                 Point p = e.Location;
                 double dy = Math.Abs(p.Y - P1.Y);
@@ -252,31 +287,25 @@ namespace WindowsFormsApplicationzhh
                     {
                         地球物理曲线.DoModify(P1, p);
                         Modified = true;
-                        
+
                     }
                     pictureBox1.Invalidate();
                 }
                 P1 = p;
-                
+
             }
-            else if (bMouseDown && e.Button == MouseButtons.Left) 
+            else if (bMouseDown && 地球物理曲线 != null && mouseMode == 鼠标模式.拖动)
+            {
+                Point p = e.Location;
+                地球物理曲线.DoPan(P1, p);
+                P1 = p;
+                pictureBox1.Invalidate();
+
+            }
+            else if (bMouseDown && e.Button == MouseButtons.Left)
             {
                 P2 = e.Location;
                 pictureBox1.Invalidate();
-            }
-        }
-
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                Point p = e.Location;
-                if (!bMouseDown && 地球物理曲线!=null && mouseMode == 鼠标模式.选择) 地球物理曲线.DoSelection(p);
-                pictureBox1.Invalidate();
-                P1 = p;
-                bMouseDown = true;
-                currentCurves = new Curves();
-                currentCurves.pCurves.Add(地球物理曲线.Clone());
             }
         }
 
@@ -329,10 +358,6 @@ namespace WindowsFormsApplicationzhh
             Application.Exit();
         }
 
-        private void 图像ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -375,11 +400,29 @@ namespace WindowsFormsApplicationzhh
             toolStripButton4_Click(sender, e);
         }
 
+        private void 放大ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButton5_Click(sender, e);
+        }
+        private void 缩小ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButton6_Click(sender, e);
+        }
+        private void 平移ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            toolStripButton8_Click(sender, e);
+        }
+        private void 还原ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButton7_Click(sender, e);
+        }
 
         private void buttons_Enable()
         {
             toolStripButton1.Enabled = true;
             toolStripButton2.Enabled = true;
+            toolStripButton8.Enabled = true;
         }
     }
 

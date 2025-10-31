@@ -590,10 +590,11 @@ namespace WindowsFormsApplicationzhh
             copy.Lines = new List<string>(this.Lines);
             copy.Points = new List<数据参数结构>(this.Points);
             copy.SelectedPoints = new List<选择点结构体>(this.SelectedPoints);
-
+            copy.zoomScale = this.zoomScale;
+            copy.offsetX = this.offsetX;
+            copy.offsetY = this.offsetY;
             return copy;
         }
-
 
     }
 }

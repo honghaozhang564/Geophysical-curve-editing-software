@@ -55,6 +55,10 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -92,7 +96,6 @@
             this.读取数据ToolStripMenuItem.Name = "读取数据ToolStripMenuItem";
             this.读取数据ToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.读取数据ToolStripMenuItem.Text = "读取数据(&ReadData)";
-            this.读取数据ToolStripMenuItem.Click += new System.EventHandler(this.读取数据ToolStripMenuItem_Click);
             // 
             // 读取电测深数据ToolStripMenuItem
             // 
@@ -153,33 +156,36 @@
             this.平移ToolStripMenuItem,
             this.还原ToolStripMenuItem});
             this.查看ToolStripMenuItem.Name = "查看ToolStripMenuItem";
-            this.查看ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.查看ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.查看ToolStripMenuItem.Text = "查看";
-            this.查看ToolStripMenuItem.Click += new System.EventHandler(this.图像ToolStripMenuItem_Click);
             // 
             // 放大ToolStripMenuItem
             // 
             this.放大ToolStripMenuItem.Name = "放大ToolStripMenuItem";
-            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.放大ToolStripMenuItem.Text = "放大(Zoom In)";
+            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.放大ToolStripMenuItem.Text = "放大(Zoom &In)";
+            this.放大ToolStripMenuItem.Click += new System.EventHandler(this.放大ToolStripMenuItem_Click);
             // 
             // 缩小ToolStripMenuItem
             // 
             this.缩小ToolStripMenuItem.Name = "缩小ToolStripMenuItem";
-            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.缩小ToolStripMenuItem.Text = "缩小(Zoom Out)";
+            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.缩小ToolStripMenuItem.Text = "缩小(Zoom &Out)";
+            this.缩小ToolStripMenuItem.Click += new System.EventHandler(this.缩小ToolStripMenuItem_Click);
             // 
             // 平移ToolStripMenuItem
             // 
             this.平移ToolStripMenuItem.Name = "平移ToolStripMenuItem";
             this.平移ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.平移ToolStripMenuItem.Text = "平移(Pan)";
+            this.平移ToolStripMenuItem.Click += new System.EventHandler(this.平移ToolStripMenuItem_Click);
             // 
             // 还原ToolStripMenuItem
             // 
             this.还原ToolStripMenuItem.Name = "还原ToolStripMenuItem";
-            this.还原ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.还原ToolStripMenuItem.Text = "还原(Reset)";
+            this.还原ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.还原ToolStripMenuItem.Text = "还原(&Reset)";
+            this.还原ToolStripMenuItem.Click += new System.EventHandler(this.还原ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -194,14 +200,14 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.关于ToolStripMenuItem.Text = "关于(About)";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
             // 帮助HelpToolStripMenuItem
             // 
             this.帮助HelpToolStripMenuItem.Name = "帮助HelpToolStripMenuItem";
-            this.帮助HelpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.帮助HelpToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
             this.帮助HelpToolStripMenuItem.Text = "帮助(Help)";
             this.帮助HelpToolStripMenuItem.Click += new System.EventHandler(this.帮助HelpToolStripMenuItem_Click);
             // 
@@ -232,7 +238,7 @@
             this.listBox1.Location = new System.Drawing.Point(16, 65);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 154);
+            this.listBox1.Size = new System.Drawing.Size(132, 124);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
             // 
@@ -240,10 +246,10 @@
             // 
             this.propertyGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.propertyGrid1.HelpVisible = false;
-            this.propertyGrid1.Location = new System.Drawing.Point(16, 227);
+            this.propertyGrid1.Location = new System.Drawing.Point(16, 197);
             this.propertyGrid1.Margin = new System.Windows.Forms.Padding(4);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(133, 135);
+            this.propertyGrid1.Size = new System.Drawing.Size(133, 165);
             this.propertyGrid1.TabIndex = 5;
             this.propertyGrid1.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propertyGrid1_PropertyValueChanged);
             // 
@@ -253,8 +259,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
+            this.toolStripButton8,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripButton7});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(487, 27);
@@ -301,6 +311,46 @@
             this.toolStripButton4.Text = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton5.Text = "放大";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton6.Text = "缩小";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton7.Text = "还原";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton8.Text = "拖动模式";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -311,7 +361,6 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -356,6 +405,10 @@
         private System.Windows.Forms.ToolStripMenuItem 还原ToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
     }
 }
 
